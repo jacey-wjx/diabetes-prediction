@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{{url_for('predict')}}" method="POST">
+    <h2>Female or male?</h2>
+    <input type="radio" name="sex" value="male">Male<br>
+    <input type="radio" name="sex" value="female">Female<br>
+    <h3>if female</h3>
+    <h3>Have been pregnant?</h3>
+    <input type="radio" name="pregnant" value="yes">Yes<br>
+    how many times so far <input class="form_input" type="text" name="pregnancy"><br>
+    <input type="radio" name="pregnant" value="no">No<br>
+    <h2>Glucose</h2>
+    <input class="form_input" type="text" name="sugar_level">
+    <select name="unit">
+    <option value="mg">mg/dl</option>
+    <option value="mmol">mmol/L</option>
+    </select><br>
+    <h2>blood pressure</h2>
+    <input class="form_input" type="text" name="blood_pressure"> mmHg <br>
+    <h2>Skin Thickness</h2>
+    <input class="form_input" type="text" name="triceps"> mm <br>
+    <h2>Insulin</h2>
+    <input class="form_input" type="text" name="insulin"> U/ml<br>
+    <h2>BMI</h2>
+    <input class="form_input" type="text" name="bmi"> kg/m2<br>
+    <h2>Diabetes pedigree function</h2>
+    <input class="form_input" type="text" name="pedigree"><br>
+    <h2>Age</h2>
+    <input class="form_input" type="text" name="age"><br>
+
+    <input type="submit" value="Predict">
+
+</form>
+</body>
+</html>
