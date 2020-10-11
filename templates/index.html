@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style type="text/css">
+    body {background-color:#67cadb;}
+    </style>
 </head>
 <body>
-<h1>These are your favourites?</h1>
-<h2>SO</h2>
-<h3>Are you curious about your Diabetes' Risk?</h3>
+
+
+<h1 style="text-align: center">These are your favourites?</h1>
+
+<div style="text-align: center">
+    <img src="./pics/milktea.jpg" width="318" height="177" alt = "milktea"/>
+    <img src="./pics/chocolate.jpg" width="284" height="177" alt = "chocolate"/>
+    <img src="./pics/cupcake.jpg" width="225" height="177" alt = "cupcake"/>
+</div>
+
+
+<h2 style="text-align: center">SO</h2>
+
+<div style="text-align: center; font-size:30px">Are you curious about your
+    <span style="background-color:#db6767;color:#000;">Sugar Level</span>?
+</div>
+<br/>
+
+
 <a href="{{ url_for('intro') }}">
-    <button>Click to find out more</button>
+    <button style="display:block;margin:0 auto"><i>Click to find out more</i></button>
 </a>
+
+
+
+
 </body>
 </html>

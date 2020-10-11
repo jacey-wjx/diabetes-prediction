@@ -1,15 +1,17 @@
 import numpy as np
 from flask import Flask, render_template, request
 from utils import Model
+import os
 
-model_name = 'diabetes-resnetv1'
-model = Model(model_name)
+# model_name = 'diabetes-resnetv1'
+# model = Model(model_name)
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    # return render_template('index_test.html')
+    return render_template('result_good_test.html')
 
 @app.route('/intro')
 def intro():
@@ -17,7 +19,7 @@ def intro():
 
 @app.route('/survey')
 def survey():
-    return render_template('survey.html')
+    return render_template('survey_test.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -59,7 +61,9 @@ def predict():
 
         input_data = np.array([preg, glucose, bp, st, insulin, bmi, dpf, age])
         my_prediction = model.predict(input_data)
-        return render_template('results.html',prediction=my_prediction)
-
+        if my_prediction == 0:
+            return render_template('result_good_test.html')
+        else:
+            return render_template('result_bad_test.html')
 if __name__ == '__main__':
     app.run(debug=False)

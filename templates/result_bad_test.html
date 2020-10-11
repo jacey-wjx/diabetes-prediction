@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Result</title>
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="../static/css/style-starter.css">
+	<!-- Template CSS -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<!-- Template CSS -->
+</head>
+<body>
+	<!-- Headers-4 block -->
+	<section class="w3l-header-4 mobile-header">
+		<div class="header-tophny">
+			<div class="container-fluid">
+				<header class="top-headerhny">
+					<!--/nav-->
+					<nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand" href="index.html">
+							Team 1<span class="fa fa-ill" aria-hidden="true"></span></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="/">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="about.html">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/survey">Survey</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!--//nav-->
+				</header>
+			</div>
+		</div>
+	</section>
+	<!-- Headers-4 block -->
+
+	<!-- feature with photo1 -->
+	<section class="w3l-feature-with-photo-1">
+		<div class="feature-with-photo-hny py-5">
+			<div class="container py-lg-5">
+				<div class="title-content mb-lg-5 mb-4">
+					<span class="sub-title" >Prediction Result</span>
+					<h1 style="color: #f24832"> Oops! It seems you are likely to have diabetes...</h1>
+				</div>
+				<div class="feature-with-photo-content">
+					<div class="ab-in-flow row mb-lg-5 mb-3">
+						<div class="col-lg-6 ab-left">
+							<img src=../static/images/hug.jpg class="img-fluid" alt="pic:hug.jpg">
+						</div>
+						<div class="col-lg-6 ab-right pl-lg-4" >
+							<h3 class="hny-title" style="color:#31d411 ">don't worry, there is always a way out!</h3>
+                            <h3 class="hny-title">
+								First important thing: make an appointment with your doctor
+							</h3>
+
+						</div>
+					</div>
+
+                    <div class="three-grids d-grid grid-columns-3 mt-lg-5">
+						<div class="grid">
+							<h3 class="hny-title">here are some advices for you:</h3>
+						</div>
+						<div class="grid">
+							<h4>Make yourself a balanced diet</h4>
+							<p>Cut sugar and refined carbs from your diet, eat more vegetable</p>
+						</div>
+						<div class="grid">
+							<h4>Work Out Regularly</h4>
+							<p>Take appropriate amout of exercise to let your body gradually restore the function of producing insulin</p>
+						</div>
+						<div class="grid">
+							<h4>Watch your blood sugar level</h4>
+							<p>Carefully track you diet to prevent blood sugar levels from getting too high.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //feature with photo1 -->
+
+</body>
+</html>
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--//-->
+<script>
+	$(function () {
+		$('.navbar-toggler').click(function () {
+			$('body').toggleClass('noscroll');
+		})
+	});
+</script>
+<!--/scroll-down-JS-->
+<!--pop-up-box-->
+
+<script src="../static/js/jquery.magnific-popup.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+		$('.popup-with-move-anim').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: false,
+			fixedBgPos: true,
+
+			overflowY: 'auto',
+
+			closeBtnInside: true,
+			preloader: false,
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-slide-bottom'
+		});
+	});
+</script>
+
+<!--//pop-up-box-->
+<!-- for blog carousel slider -->
+<script src="../static/js/owl.carousel1.js"></script>
+<script>
+	$(document).ready(function () {
+		$("#owl-demo2").owlCarousel({
+			items: 1,
+			lazyLoad: true,
+			autoPlay: true,
+			navigation: false,
+			navigationText: ["", ""],
+			rewindNav: false,
+			scrollPerPage: true,
+			pagination: false,
+			paginationNumbers: false,
+
+		})
+	});
+	$(document).ready(function () {
+		$("#owl-demo1").owlCarousel({
+			loop: true,
+			margin: 20,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 1,
+					nav: true
+				},
+				600: {
+					items: 2,
+					nav: false
+				},
+				1000: {
+					items: 3,
+					nav: true,
+					loop: false
+				}
+			}
+		})
+	})
+</script>
+
+<script src="../static/js/bootstrap.min.js"></script>
