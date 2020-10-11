@@ -13,7 +13,7 @@ def home():
 
 @app.route('/intro')
 def intro():
-    return render_template('intro.html')
+    return render_template('about.html')
 
 @app.route('/survey')
 def survey():
