@@ -1,16 +1,14 @@
 import numpy as np
 from flask import Flask, render_template, request
 from utils import Model
-import os
 
-model_name = 'diabetes-resnetv1'
+model_name = 'stacked_resnet'
 model = Model(model_name)
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # return render_template('index.html')
     return render_template('index.html')
 
 @app.route('/intro')
@@ -58,7 +56,6 @@ def predict():
 
         #get age
         age = int(request.form['age'])
-
         input_data = np.array([preg, glucose, bp, st, insulin, bmi, dpf, age])
         my_prediction = model.predict(input_data)
         if my_prediction == 0:

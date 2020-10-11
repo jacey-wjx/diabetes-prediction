@@ -24,7 +24,7 @@ for l in range(5):
 # if round(res[0][1]) == 1:
 #     print("Diabetes")
 
-modelname = 'diabetes-resnetv1'
+modelname = 'diabetes-resnet'
 def load_resNet_models(n_models):
     all_models = list()
     for i in range(n_models):
